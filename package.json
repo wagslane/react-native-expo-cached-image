@@ -1,0 +1,40 @@
+{
+  "name": "react-native-expo-cached-image",
+  "version": "1.0.0",
+  "description": "Cached image component for Expo's managed workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'We should write tests someday'",
+    "lint": "eslint ./ --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lane-c-wagner/react-native-expo-cached-image.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "expo",
+    "cache",
+    "image"
+  ],
+  "author": "lane-c-wagner",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "bugs": {
+    "url": "https://github.com/lane-c-wagner/react-native-expo-cached-image/issues"
+  },
+  "homepage": "https://github.com/lane-c-wagner/react-native-expo-cached-image",
+  "dependencies": {
+    "expo-crypto": "~8.0.0",
+    "expo-file-system": "~8.0.0",
+    "react": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-preset-expo": "^8.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-native": "^3.8.1"
+  }
+}
