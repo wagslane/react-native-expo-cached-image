@@ -2,19 +2,11 @@
 
 Cached image component for Expo's managed workflow
 
-## Installation
-
-`expo install react-native-expo-cached-image`
-
-or
+## ⚙️ Installation
 
 `yarn add react-native-expo-cached-image`
 
-or
-
-`npm install react-native-expo-cached-image`
-
-## Quick Start
+## 🚀 Quick Start
 
 ```javascript
 import CachedImage from 'react-native-expo-cached-image';
@@ -24,12 +16,13 @@ import CachedImage from 'react-native-expo-cached-image';
 
 ```
 
-The component will download the image to the user's local filesystem using a deterministic hash
+The CachedImage component downloads the image to the user's local filesystem using a deterministic hash
 of the URI as the path key. If the image is already downloaded, it will be rendered without re-downloading.
 
 ### Props
 
-CachedImage is a direct wrapper of [react-native Image](https://facebook.github.io/react-native/docs/image). As such, all of its props are available as props to CachedImage. Styles are also passed down.
+CachedImage is a direct wrapper of [react-native Image](https://facebook.github.io/react-native/docs/image)
+and matches it's API. As such, all of its props are available as props to CachedImage. Styles are also passed down.
 
 #### ImageBackground
 
@@ -43,9 +36,21 @@ import CachedImage from 'react-native-expo-cached-image';
 
 ```
 
-## Contributing
+## 💬 Contact
 
-Feel free to contribute! This package is open-source, just make sure that your pull request passes linting and tests:
+[![Twitter Follow](https://img.shields.io/twitter/follow/wagslane.svg?label=Follow%20Wagslane&style=social)](https://twitter.com/intent/follow?screen_name=wagslane)
+
+Submit an issue (above in the issues tab)
+
+## 🙏🏻 Compatibility
+
+CachedImage Has been tested with the react-native Expo managed workflow. If you have success with other workflows let us know!
+
+## 👏 Contributing
+
+We love help! Contribute by forking the repo and opening pull requests. Please ensure that your code passes the existing tests and linting, and write tests to test your changes if applicable.
+
+All pull requests should be submitted to the "master" branch.
 
 ```bash
 yarn lint
