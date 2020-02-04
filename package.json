@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-cached-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cached image component for Expo's managed workflow",
   "main": "index.js",
   "scripts": {
