@@ -1,5 +1,7 @@
 # react-native-expo-cached-image
 
+[![npm version](https://badge.fury.io/js/react-native-expo-cached-image.svg)](https://badge.fury.io/js/react-native-expo-cached-image)
+
 Cached image component for Expo's managed workflow
 
 ## ⚙️ Installation
