@@ -14,8 +14,11 @@ Cached image component for Expo's managed workflow
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
-
+<CachedImage showIndicator = {true} 
+             cachedImageStyles = {styles.imageStyle}                                        
+             activityIndicatorStyle = {styles.activityIndicatorStyle}                                                 
+             activityIndicatorColor = {'black'}
+             activityIndicatorSize = {'small'} source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
 ```
 
 The CachedImage component downloads the image to the user's local filesystem using a deterministic hash
@@ -26,15 +29,31 @@ of the URI as the path key. If the image is already downloaded, it will be rende
 CachedImage is a direct wrapper of [react-native Image](https://facebook.github.io/react-native/docs/image)
 and matches it's API. As such, all of its props are available as props to CachedImage. Styles are also passed down.
 
+If you want to show Activity Indicator while downloading the image/even while importing the cached image, pass the activityIndicator related props. 
+
+For the color, you can either pass hexcode or even the color name. ActivityIndicator is actually a react-native component which actually support all of its features. When it come to size, it supports 'small', 'medium', 'large' 
+
+Also you can pass the style for the Image as the prop, which is actually mandatory, otherwise Cached Image will not display.
+
+Same applies for both Image and ImageBackground. 
+
 #### ImageBackground
 
 CachedImage can optionally be used as a wrapper of [react-native ImageBackground](https://facebook.github.io/react-native/docs/imagebackground). To do so, pass in the prop isBackground={true}.
 
 ```javascript
+
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage isBackground source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
+<CachedImage isBackground source = {{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}
+             showIndicator = {true} 
+             cachedImageStyles = {styles.imageStyle}                                        
+             activityIndicatorStyle = {styles.activityIndicatorStyle}                                                 
+             activityIndicatorColor = {'black'}
+             activityIndicatorSize = {'small'}/>
+
+
 
 ```
 
