@@ -58,7 +58,7 @@ export default class CachedImage extends Component {
   render() {
     if (this.props.isBackground) {
       return (
-        <ImageBackground style={this.props.cachedImageStyles}
+        <ImageBackground
           {...this.props}
           source={this.state.imgURI ? {uri: this.state.imgURI} : null}
         >
@@ -66,7 +66,7 @@ export default class CachedImage extends Component {
         </ImageBackground>);
     } else {
       return (
-        <Image style={this.props.cachedImageStyles}
+        <Image
           {...this.props}
           source={this.state.imgURI ? {uri: this.state.imgURI} : null}
         />
