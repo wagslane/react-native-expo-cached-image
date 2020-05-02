@@ -14,7 +14,7 @@ Cached image component for Expo's managed workflow
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
+<CachedImage cachedImageStyles={styles.imageStyle} source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
 
 ```
 
@@ -26,6 +26,8 @@ of the URI as the path key. If the image is already downloaded, it will be rende
 CachedImage is a direct wrapper of [react-native Image](https://facebook.github.io/react-native/docs/image)
 and matches it's API. As such, all of its props are available as props to CachedImage. Styles are also passed down.
 
+You can assign your own style to Image/ImageBackground view as shown above and its a mandatory props, without this Image/ImageBackground won't be displayed. The style should contain image height and width.
+
 #### ImageBackground
 
 CachedImage can optionally be used as a wrapper of [react-native ImageBackground](https://facebook.github.io/react-native/docs/imagebackground). To do so, pass in the prop isBackground={true}.
@@ -34,7 +36,7 @@ CachedImage can optionally be used as a wrapper of [react-native ImageBackground
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage isBackground source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
+<CachedImage cachedImageStyles={styles.imageStyle} isBackground source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
 
 ```
 

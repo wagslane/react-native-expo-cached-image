@@ -60,16 +60,16 @@ export default class CachedImage extends Component {
     return (
       <View>
         {this.props.isBackground ? (
-          <ImageBackground
+          <ImageBackground style={this.props.cachedImageStyles}
             {...this.props}
-            source={this.state.imgURI ? { uri: this.state.imgURI } : null}
+            source={this.state.imgURI ? {uri: this.state.imgURI} : null}
           >
             {this.props.children}
           </ImageBackground>
         ) : (
-          <Image
+          <Image style={this.props.cachedImageStyles}
             {...this.props}
-            source={this.state.imgURI ? { uri: this.state.imgURI } : null}
+            source={this.state.imgURI ? {uri: this.state.imgURI} : null}
           />
         )}
       </View>
