@@ -49,30 +49,29 @@ export default class CachedImage extends Component {
       this.setState({
         imgURI: imageObject.uri
       });
-    }
-    catch (err) {
+    } catch (err) {
       console.log('Image loading error:', err);
-      this.setState({ imgURI: remoteURI });
+      this.setState({imgURI: remoteURI});
     }
   }
 
   render() {
-    return (
-      <View>
-        {this.props.isBackground ? (
-          <ImageBackground
-            {...this.props}
-            source={this.state.imgURI ? { uri: this.state.imgURI } : null}
-          >
-            {this.props.children}
-          </ImageBackground>
-        ) : (
-          <Image
-            {...this.props}
-            source={this.state.imgURI ? { uri: this.state.imgURI } : null}
-          />
-        )}
-      </View>
-    );
+    if (this.props.isBackground) {
+      return (
+        <ImageBackground
+          {...this.props}
+          source={this.state.imgURI ? {uri: this.state.imgURI} : null}
+        >
+          {this.props.children}
+        </ImageBackground>);
+    } else {
+      return (
+        <Image
+          {...this.props}
+          source={this.state.imgURI ? {uri: this.state.imgURI} : null}
+        />
+      );
+    }
   }
 }
+

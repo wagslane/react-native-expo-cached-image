@@ -14,7 +14,7 @@ Cached image component for Expo's managed workflow
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
+<CachedImage style={styles.imageStyle} source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
 
 ```
 
@@ -34,7 +34,7 @@ CachedImage can optionally be used as a wrapper of [react-native ImageBackground
 import CachedImage from 'react-native-expo-cached-image';
 
 // In render()
-<CachedImage isBackground source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
+<CachedImage style={styles.imageStyle} isBackground={true} source={{ uri: 'https://qvault.io/wp-content/uploads/2019/05/QVault-app.png' }}/>
 
 ```
 
