@@ -23,12 +23,12 @@ of the URI as the path key. If the image is already downloaded, it will be rende
 
 ### Props
 
-CachedImage is a direct wrapper of [react-native Image](https://facebook.github.io/react-native/docs/image)
-and matches it's API. As such, all of its props are available as props to CachedImage. Styles are also passed down.
+CachedImage is a direct wrapper of the standard [React Native Image](https://facebook.github.io/react-native/docs/image)
+and matches it's API. As such, all of the standard props are available as props to CachedImage. Styles are also passed down.
 
 #### ImageBackground
 
-CachedImage can optionally be used as a wrapper of [react-native ImageBackground](https://facebook.github.io/react-native/docs/imagebackground). To do so, pass in the prop isBackground={true}.
+CachedImage can optionally be used as a wrapper of [React Native's ImageBackground](https://facebook.github.io/react-native/docs/imagebackground). To do so, pass in the prop isBackground={true}.
 
 ```javascript
 import CachedImage from 'react-native-expo-cached-image';
@@ -50,7 +50,11 @@ CachedImage Has been tested with the react-native Expo managed workflow. If you 
 
 ## 👏 Contributing
 
-We love help! Contribute by forking the repo and opening pull requests. Please ensure that your code passes the existing tests and linting, and write tests to test your changes if applicable.
+We love help! Contribute by forking the repo and opening pull requests.
+
+Please ensure that your code passes the existing tests and linting. Write tests to test your changes if applicable.
+
+Don't make stylistic or whitespace changes without contacting maintainers - we probably won't approve unsolicited stylistic changes.
 
 All pull requests should be submitted to the "master" branch.
 
