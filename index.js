@@ -9,17 +9,21 @@ export default class CachedImage extends Component {
   }
 
   async componentDidMount() {
-    const filesystemURI = await this.getImageFilesystemKey(this.props.source.uri);
-    await this.loadImage(filesystemURI, this.props.source.uri);
+    if (this.props.source.uri) {
+      const filesystemURI = await this.getImageFilesystemKey(this.props.source.uri);
+      await this.loadImage(filesystemURI, this.props.source.uri);
+    }
   }
 
   async componentDidUpdate() {
-    const filesystemURI = await this.getImageFilesystemKey(this.props.source.uri);
-    if (this.props.source.uri === this.state.imgURI ||
-      filesystemURI === this.state.imgURI) {
-      return null;
+    if (this.props.source.uri) {
+      const filesystemURI = await this.getImageFilesystemKey(this.props.source.uri);
+      if (this.props.source.uri === this.state.imgURI ||
+        filesystemURI === this.state.imgURI) {
+        return null;
+      }
+      await this.loadImage(filesystemURI, this.props.source.uri);
     }
-    await this.loadImage(filesystemURI, this.props.source.uri);
   }
 
   async getImageFilesystemKey(remoteURI) {
@@ -56,11 +60,15 @@ export default class CachedImage extends Component {
   }
 
   render() {
+    let source = this.state.imgURI ? {uri: this.state.imgURI} : null;
+    if (!source && this.props.source) {
+      source= this.props.source;
+    }
     if (this.props.isBackground) {
       return (
         <ImageBackground
           {...this.props}
-          source={this.state.imgURI ? {uri: this.state.imgURI} : null}
+          source={source}
         >
           {this.props.children}
         </ImageBackground>);
@@ -68,7 +76,7 @@ export default class CachedImage extends Component {
       return (
         <Image
           {...this.props}
-          source={this.state.imgURI ? {uri: this.state.imgURI} : null}
+          source={source}
         />
       );
     }
