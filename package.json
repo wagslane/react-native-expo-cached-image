@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/lane-c-wagner/react-native-expo-cached-image",
   "dependencies": {
-    "expo-crypto": "~8.0.0",
-    "expo-file-system": "~8.0.0",
-    "react": "16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz"
+    "expo-crypto": "^8.0.0",
+    "expo-file-system": "^8.0.0",
+    "react": "^16.0.0",
+    "react-native": "^0.37.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
