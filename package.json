@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/lane-c-wagner/react-native-expo-cached-image",
   "dependencies": {
-    "expo-crypto": "^8.0.0",
-    "expo-file-system": "^8.0.0",
-    "react": "^16.0.0",
-    "react-native": "^0.37.0"
+    "expo-crypto": ">8.0.0",
+    "expo-file-system": ">8.0.0",
+    "react": ">16.0.0",
+    "react-native": ">0.37.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "babel-preset-expo": "^8.0.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.5.0",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-native": "^3.8.1"
   }
