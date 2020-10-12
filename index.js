@@ -37,7 +37,6 @@ export default class CachedImage extends Component {
   async checkClear() {
     try {
       if (this.downloadResumable) {
-        console.log('Image download interrupted');
         const t = await this.downloadResumable.pauseAsync();
         const filesystemURI = await this.getImageFilesystemKey(this.props.source.uri);
         const metadata = await FileSystem.getInfoAsync(filesystemURI);
@@ -99,7 +98,6 @@ export default class CachedImage extends Component {
 
   onDownloadUpdate(downloadProgress) {
     if (downloadProgress.totalBytesWritten >= downloadProgress.totalBytesExpectedToWrite) {
-      console.log('Download completed');
       if (this.downloadResumable && this.downloadResumable._removeSubscription) {
         this.downloadResumable._removeSubscription();
       }
