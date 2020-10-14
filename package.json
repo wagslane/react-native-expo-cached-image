@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'We should write tests someday'",
-    "lint": "eslint ./ --ext .js"
+    "lint": "eslint ./ --ext .js",
+    "format": "prettier --write **/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lane-c-wagner/react-native-expo-cached-image.git"
+  },
+  "eslintConfig": {
+    "extends": "universe/native"
   },
   "keywords": [
     "react",
@@ -31,10 +35,14 @@
     "react-native": ">0.37.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
     "babel-eslint": "^10.0.3",
     "babel-preset-expo": "^8.0.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.11.0",
+    "eslint-config-universe": "^5.0.0",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-native": "^3.8.1"
+    "eslint-plugin-react-native": "^3.8.1",
+    "prettier": "^2.1.2"
   }
 }
